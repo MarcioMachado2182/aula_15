@@ -1,0 +1,18 @@
+class Peixe:
+    def __init__(self, especie, tipo_de_agua, profundidade):
+        self.especie = especie
+        self.tipo_de_agua = tipo_de_agua
+        self.profundidade = profundidade
+
+    def __repr__(self):
+        return f"O peixe (especie = '{self.especie}', tipo_de_agua = {self.tipo_de_agua}, profundidade = {self.profundidade})"
+    
+lista_peixes = []
+nomes_peixes = ['Bagre', 'Tainha', 'Sardinha', 'Atum', 'Salmao']
+lista_tipo_de_agua = ['Rio', 'Rio', 'Mar', 'Mar', 'Mar']
+lista_profundidade = [10, 15, 35, 50, 100]
+
+for nomes_peixes,tipo_de_agua, profundidade in zip(nomes_peixes,lista_tipo_de_agua, lista_profundidade):
+    lista_peixes.append(Peixe(nomes_peixes, tipo_de_agua, profundidade))
+
+print(lista_peixes)
